@@ -1,0 +1,37 @@
+{
+  "name": "hapi-typescript-example",
+  "version": "1.0.0",
+  "description": "hapi + typescript + ts-node + lab",
+  "main": "server",
+  "scripts": {
+    "start": "./node_modules/.bin/ts-node server.ts",
+    "test": "./node_modules/.bin/lab --sourcemaps --transform ./node_modules/lab-transform-typescript -c -L",
+    "test-cover": "./node_modules/.bin/lab --transform ./node_modules/lab-transform-typescript -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
+    "build:live": "./node_modules/.bin/nodemon --exec ./node_modules/.bin/ts-node -- ./server.ts"
+  },
+  "keywords": [
+    "hapi",
+    "typescript",
+    "ts-node",
+    "glue",
+    "joi"
+  ],
+  "author": "Seunghyun Kang",
+  "license": "ISC",
+  "dependencies": {
+    "confidence": "^3.0.2",
+    "glue": "^4.1.0",
+    "hapi": "^16.3.0"
+  },
+  "devDependencies": {
+    "@types/hapi": "^16.1.2",
+    "@types/joi": "^10.3.2",
+    "@types/node": "^7.0.22",
+    "code": "^4.0.0",
+    "lab": "^13.1.0",
+    "lab-transform-typescript": "^3.0.1",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.4"
+  }
+}

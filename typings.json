@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "confidence": "registry:dt/confidence#1.4.2+20160428043022",
+    "glue": "registry:npm/glue#3.3.0+20160618213616",
+    "hapi": "registry:dt/hapi#16.0.0+20170125175540",
+    "joi": "registry:dt/joi#10.0.0+20170211105955"
+  },
+  "globalDependencies": {
+    "code": "github:garthk/lab-transform-typescript/typings-local/code.d.ts",
+    "lab": "github:garthk/lab-transform-typescript/typings-local/lab.d.ts"
+  }
+}
