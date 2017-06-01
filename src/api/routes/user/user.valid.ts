@@ -1,4 +1,4 @@
-import { UserModel } from '../../../../models';
+import { UserModel } from './../../../models';
 import { NumberSchema } from 'joi';
 
 export const getUser = {
