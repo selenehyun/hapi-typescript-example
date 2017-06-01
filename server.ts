@@ -9,6 +9,6 @@ Composer((err: Error, server: Server) => {
     server.start((error: Error) => {
         if (error) throw error;
 
-        console.log(`Started the plot device`, server.info);
+        console.log(`Started the Server on port`, server.info.port);
     });
 });
