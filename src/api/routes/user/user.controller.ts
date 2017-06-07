@@ -1,16 +1,13 @@
-import { Server, Request, IReply } from 'hapi';
-import * as valid from './user.valid';
+import { IReply, Request, Server } from 'hapi';
 
 export default (server: Server) => {
-    // Get User Detail Info
+    // Get Self Info
     server.route({
         method: 'GET',
-        path: '/user/{idx}',
+        path: '/self',
         handler: (req: Request, reply: IReply) => {
-            reply({ name: req.params.idx });
-        },
-        config: {
-            validate: valid.getUser
+            // credentials.user 정보는 token을 받아서 유저정보를 가져오는것 이므로 최신정보임.
+            reply(req.auth.credentials.user);
         },
     });
 };

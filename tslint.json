@@ -1,0 +1,33 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "ordered-imports": [
+            true,
+            {
+                "import-sources-order": "lowercase-first",
+                "named-imports-order": "lowercase-first"
+            }
+        ],
+        "object-literal-sort-keys": false,
+        "no-shadowed-variable": false,
+        "curly": false,
+        "no-console": [
+            false
+        ],
+        "quotemark":[
+            true,
+            "single",
+            "jsx-single"
+        ],
+        "max-line-length": [
+            false
+        ]
+    },
+    "rulesDirectory": [
+        "src/"
+    ]
+}

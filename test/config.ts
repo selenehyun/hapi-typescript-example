@@ -1,7 +1,7 @@
 'use strict';
 
-import * as Lab from 'lab';
 import * as Code from 'code';
+import * as Lab from 'lab';
 import * as Config from '../config';
 
 export const lab = Lab.script();

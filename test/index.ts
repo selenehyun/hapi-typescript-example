@@ -1,8 +1,8 @@
 'use strict';
 
-import * as Lab from 'lab';
 import * as Code from 'code';
 import { Server } from 'hapi';
+import * as Lab from 'lab';
 import Composer from '../index';
 
 export const lab = Lab.script();

@@ -1,14 +1,26 @@
 'use strict';
 
-import Composer from './index';
 import { Server } from 'hapi';
+import { get } from './config';
+import Composer from './index';
+import { validate } from './src/lib/jwt';
 
 Composer((err: Error, server: Server) => {
     if (err) throw err;
 
-    server.start((error: Error) => {
-        if (error) throw error;
+    // Console Colors
+    require('colors');
 
-        console.log(`Started the Server on port`, server.info.port);
+    server.auth.strategy('jwt', 'jwt', {
+        key: get('/jwt/secretKey'),
+        validateFunc: validate,
+        verifyOptions: { algorithms: ['HS256'] },
+    });
+    server.auth.default('jwt');
+
+    server.start((err: Error) => {
+        if (err) throw err;
+
+        console.log(`Started the Server on port:`.blue, ` ${server.info.port} `.bold.bgBlue);
     });
 });

@@ -1,11 +1,19 @@
 {
   "dependencies": {
+    "async": "registry:npm/async#2.0.1+20160815105832",
+    "bcrypt": "registry:npm/bcrypt#1.0.0+20161205015554",
+    "boom": "registry:dt/boom#0.0.0+20170118002142",
+    "colors": "registry:dt/colors#1.1.0+20161228000716",
     "confidence": "registry:dt/confidence#1.4.2+20160428043022",
     "glue": "registry:npm/glue#3.3.0+20160618213616",
     "hapi": "registry:dt/hapi#16.0.0+20170125175540",
-    "joi": "registry:dt/joi#10.0.0+20170211105955"
+    "hapi-auth-jwt2": "registry:npm/hapi-auth-jwt2#7.0.0+20160719164101",
+    "joi": "registry:dt/joi#10.0.0+20170211105955",
+    "jsonwebtoken": "registry:npm/jsonwebtoken#7.1.8+20160811031426",
+    "mysql": "registry:npm/mysql#2.11.1+20161114232222"
   },
   "globalDependencies": {
+    "async": "registry:dt/async#2.0.1+20170322225536",
     "code": "github:garthk/lab-transform-typescript/typings-local/code.d.ts",
     "lab": "github:garthk/lab-transform-typescript/typings-local/lab.d.ts"
   }

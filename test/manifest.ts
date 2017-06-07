@@ -1,7 +1,7 @@
 'use strict';
 
-import * as Lab from 'lab';
 import * as Code from 'code';
+import * as Lab from 'lab';
 import * as Manifest from '../manifest';
 
 export const lab = Lab.script();
@@ -13,7 +13,6 @@ lab.experiment('Manifest', () => {
         Code.expect(Manifest.get('/')).to.be.an.object();
         done();
     });
-
 
     lab.test('it gets manifest meta data', (done) => {
 

@@ -1,8 +1,8 @@
 'use strict';
 
-import * as Lab from 'lab';
 import * as Code from 'code';
 import * as Hapi from 'hapi';
+import * as Lab from 'lab';
 import * as Config from '../../../config';
 import * as ApiPlugin from '../../../src/api';
 
@@ -25,7 +25,7 @@ lab.experiment('Index Plugin', () => {
     lab.beforeEach((done) => {
         request = {
             method: 'GET',
-            url: '/'
+            url: '/',
         };
 
         done();

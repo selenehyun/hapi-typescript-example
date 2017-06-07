@@ -1,19 +1,19 @@
 'use strict';
 
 import * as fs from 'fs';
-import * as path from 'path';
-import * as Joi from 'joi';
-import { Server, Request, IReply } from 'hapi';
 import { Options } from 'glue';
+import { IReply, Request, Server } from 'hapi';
+import * as Joi from 'joi';
+import * as path from 'path';
 
 // this == Glue
-export function register (server: Server, options: Object, next: any) {
+export function register(server: Server, options: Options, next: any) {
     server.route({
-        method: 'GET',
-        path: '/',
         handler: (req: Request, reply: IReply) => {
             reply({ message: 'welcome to my api' });
         },
+        method: 'GET',
+        path: '/',
     });
 
     const loadControllers = (dirPath: string) => {
@@ -27,8 +27,9 @@ export function register (server: Server, options: Object, next: any) {
     };
     loadControllers(__dirname);
 
+    console.log('Registered API Route.');
     next();
-};
+}
 
 exports.register.attributes = {
     name: 'api',
